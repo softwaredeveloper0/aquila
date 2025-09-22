@@ -765,7 +765,8 @@ a:hover {
 
 @media (max-width: 768px) {
     body {
-        background-size: 100% 670px; /* Ensures the top background image scales proportionally on mobile */
+        background-size: 100% 670px;
+        background-image: url('picture.jpg');/* Ensures the top background image scales proportionally on mobile */
     }
     .navbar { padding: 15px 20px; }
     .nav-links { display: none; flex-direction: column; width: 100%; text-align: center; margin-top: 15px; }
