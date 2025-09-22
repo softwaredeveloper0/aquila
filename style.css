@@ -754,22 +754,6 @@ a:hover {
 .reveal.delay-6 { transition-delay: 0.6s; }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 992px) {
-   
-   
-    .navbar { padding: 20px 30px; }
-    .nav-links li { margin-left: 25px; }
-    .hero-content h1 { font-size: 3.5em; }
-    .hero-content .tagline { font-size: 1.3em; }
-    .contact-grid { grid-template-columns: 1fr; }
-    .contact-info, .contact-form-container { padding: 30px; }
-    .footer-content { flex-direction: column; gap: 20px; }
-    .footer-links { gap: 15px; justify-content: center; }
-    .gallery1 { flex-direction: column; align-items: center; }
-}
-
-
-
 @media (max-width: 1024px) {
    
    
