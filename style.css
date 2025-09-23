@@ -872,14 +872,7 @@ a:hover {
 /* Mobile Navigation Layout */
 @media (max-width: 768px) {
 
-    body {
-    background-color: rgba(0, 0, 0, 0.5);
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.7;
-    color: var(--text-dark);
-    overflow-x: hidden;
-    width: 80%;
-}
+   
     .navbar {
         justify-content: space-between;
         transition: all 0.3s ease;
