@@ -39,12 +39,14 @@ body::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,255, 0.25);
+    background-color: rgba(0,0,0, 0.7);
     z-index: -1; /* Same z-index as ::before, but will render on top due to source order */
 }
 html{
     width: 100%;
     overflow-x: hidden;
+    scroll-behavior:smooth;
+    scroll-padding-top: 75px; /* Offset for the sticky navbar */
 }
 
 body {
@@ -167,6 +169,7 @@ a:hover {
 
 .navbar.sticky {
     background-color: var(--white);
+    
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     height: 75px;
 }
@@ -204,7 +207,7 @@ a:hover {
 .nav-links a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    color: var(--primary-blue);
+    color: rgb(185, 185, 185);
     position: relative;
     padding-bottom: 5px;
     transition: color 0.3s ease;
@@ -344,8 +347,8 @@ a:hover {
     padding: 50px 30px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 290px;
+    flex: 0 1 300px; /* Set a flex-basis to encourage a 3-column layout */
+    max-width: 320px; /* Prevent cards from growing too large */
     transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
     transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease, opacity 0.4s ease;
     border-top: 5px solid var(--secondary-blue);
@@ -507,7 +510,7 @@ a:hover {
 /* Our Story Section */
 .our-story-section {
     background-color: rgba(255, 255, 255, 0.95);
-    padding: 20px 0; /* Reduced top/bottom padding to close the gap */
+    padding: 0 0 20px; /* Removed top padding to reduce gap */
 }
 
 .our-story-content {
@@ -842,10 +845,17 @@ a:hover {
 .us{
     color: var(--primary-blue);
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 80px 20px;
-    text-align: center;
+    padding: 60px 20px;
 }
 
+.us-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+.us-content p {
+    margin-bottom: 30px;
+}
 .ull{
     list-style: none;
     display: flex;
@@ -906,8 +916,8 @@ a:hover {
     .service-container {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
-        padding-bottom: 100px; /* Space for last card to scroll */
+        gap: 20px; /* Space for last card to scroll */
+        padding-bottom: 100px;
     }
     .service-card {
         max-width: 100%;
@@ -952,10 +962,16 @@ a:hover {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: var(--primary-blue); /* Set to primary blue for all states */
+    background-color: rgb(185, 185, 185); /* White by default */
     transition: all 0.3s ease;
 
 }
+
+.navbar.sticky .hamburger-menu span {
+    background-color: var(--primary-blue); /* Blue when sticky */
+}
+
+
 
 /* Mobile Navigation Layout */
 @media (max-width: 768px) {
@@ -995,6 +1011,7 @@ a:hover {
         background-color: rgba(255, 255, 255, 0.25); /* 75% transparent white background */
         -webkit-backdrop-filter: blur(12px); /* Add blur for consistency */
         backdrop-filter: blur(12px);
+        color: var(--primary-blue);
                
     } 
         
@@ -1008,5 +1025,8 @@ a:hover {
         color: var(--primary-blue);
         font-size: 1.5em;
 
+    }
+    .navb-links .sticky{
+        color: var(--primary-blue);
     }
 }
