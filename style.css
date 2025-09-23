@@ -1,4 +1,5 @@
 /* General & Typography */
+
 :root {
     --primary-blue: #0B2A4A;
     --secondary-blue: #1C5D99;
@@ -13,6 +14,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html {
+    overflow: hidden;
 }
 
 body::before {
