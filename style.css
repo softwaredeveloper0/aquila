@@ -38,8 +38,7 @@ html{
 }
 
 body {
-    background-color: rgba(0, 0, 0, 0.5);
-    font-family: 'Montserrat', sans-serif;
+    background: url('https://softwaredeveloper0.github.io/aquila/picture1.png') no-repeat center center;    font-family: 'Montserrat', sans-serif;
     line-height: 1.7;
     color: var(--text-dark);
     overflow-x: hidden;
