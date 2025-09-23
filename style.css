@@ -25,10 +25,9 @@ body::before {
     position:fixed;
     top: 0;
     left: 0;
-    max-width: 100%;
-    height: auto;
+    width: 100%; /* Ensure it covers the full viewport width */
+    height: 100%; /* Ensure it covers the full viewport height */
     background: url('https://softwaredeveloper0.github.io/aquila/picture1.png') no-repeat center center;
-    display: flex;
     background-size: cover;
     z-index: -1; /* Place it behind all other content */
 }
@@ -469,6 +468,38 @@ a:hover {
     text-align: left;
 }
 
+/* Our Partners Section */
+.partners-section {
+    margin-top: 50px; /* Space above partners section */
+    text-align: center;
+}
+
+.partners-title {
+    color: var(--primary-blue);
+    margin-bottom: 30px;
+    font-size: 2em; /* Inherits from h2, but explicitly set for clarity */
+    text-align: center;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for desktop */
+    gap: 20px;
+    justify-items: center; /* Center images within their grid cells */
+    align-items: center;
+    max-width: 400px; /* Constrain width for the 2-column grid */
+    margin: 0 auto; /* Center the grid itself */
+}
+
+.partners-grid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: add some styling */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Optional: add some styling */
+    object-fit: contain; /* Ensures the entire image is visible without cropping */
+    padding: 10px; /* Add some padding around the image if it's a logo */
+}
+
 /* Contact Section */
 
 
@@ -506,6 +537,7 @@ a:hover {
 .contact {
     background: linear-gradient(to top, var(--white), var(--light-gray));
     padding: 100px 20px;
+    text-align: center;
 }
 
 .contact-grid {
@@ -795,6 +827,11 @@ a:hover {
     .footer-content { flex-direction: column; gap: 20px; }
     .footer-links { gap: 15px; justify-content: center; }
     .gallery1 { flex-direction: column; align-items: center; }
+
+    .partners-grid {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+        max-width: 250px; /* Adjust max-width for single column on mobile */
+    }
 }
 
 @media (max-width: 768px) {
