@@ -907,7 +907,7 @@ a:hover {
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        padding-bottom: 50vh; /* Space for last card to scroll */
+        padding-bottom: 100px; /* Space for last card to scroll */
     }
     .service-card {
         max-width: 100%;
