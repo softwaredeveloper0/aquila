@@ -26,13 +26,10 @@ body {
     color: var(--text-dark);
     overflow-x: hidden;
     
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    
     background-image: url('https://softwaredeveloper0.github.io/aquila/picture1.png') no-repeat center center;
     
-    background-size: cover;
+    
 }
 
 h1, h2, h3 {
