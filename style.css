@@ -751,14 +751,10 @@ a:hover {
 
 
 .us{
-    position: sticky;
-    max-width: 500px;
-    margin: auto;
-    padding: 40px;
-    background-color: var(--white);
-    background-size: cover;
-    text-align: justify;
-    
+    color: var(--primary-blue);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 80px 20px;
+    text-align: center;
 }
 
 .ull{
