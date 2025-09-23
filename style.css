@@ -28,7 +28,7 @@ body::before {
     max-width: 100%;
     height: auto;
     background: url('https://softwaredeveloper0.github.io/aquila/picture1.png') no-repeat center center;
-    
+    display: flex;
     background-size: cover;
     z-index: -1; /* Place it behind all other content */
 }
