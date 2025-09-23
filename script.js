@@ -110,4 +110,30 @@ document.addEventListener('DOMContentLoaded', () => {
             serviceCards.forEach(card => cardObserver.observe(card));
         }
     }
+
+    // 7. Flying Plane on Scroll
+    const flyingPlane = document.getElementById('flying-plane');
+    if (flyingPlane) {
+        window.addEventListener('scroll', () => {
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollTop = window.scrollY;
+
+            // Define when the animation should start and end (e.g., between 10% and 80% of page scroll)
+            const startAnimationScroll = scrollHeight * 0.10;
+            const endAnimationScroll = scrollHeight * 0.80;
+
+            if (scrollTop > startAnimationScroll && scrollTop < endAnimationScroll) {
+                // Calculate the progress of the animation (a value from 0 to 1)
+                const animationProgress = (scrollTop - startAnimationScroll) / (endAnimationScroll - startAnimationScroll);
+                
+                // Map progress to the plane's horizontal position (from -10vw to 110vw)
+                const positionX = -10 + (animationProgress * 120);
+                
+                flyingPlane.style.transform = `translateX(${positionX}vw) rotate(15deg)`;
+                flyingPlane.style.opacity = '1';
+            } else {
+                flyingPlane.style.opacity = '0';
+            }
+        });
+    }
 });
