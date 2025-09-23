@@ -56,10 +56,15 @@ a:hover {
 
 .section {
     padding: 80px 20px;
-    text-align: center;
-    max-width: 1200px;
-    margin: auto;
+    
     position: relative;
+}
+.section-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 .section-title {
@@ -273,12 +278,10 @@ a:hover {
 
 }
 
-.hi{
-    width: auto;
+.main-content-wrapper {
     background-color: white;
     position: relative; /* Create a stacking context to appear above the background */
     z-index: 1;
-
 }
 
 .service-container {
