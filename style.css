@@ -27,7 +27,7 @@ body::before {
     left: 0;
     width: 100%; /* Ensure it covers the full viewport width */
     height: 100%; /* Ensure it covers the full viewport height */
-    background: url('https://softwaredeveloper0.github.io/aquila/picture1.png') no-repeat center center;
+    background: url('https://softwaredeveloper0.github.io/aquila/covernew1.jpeg') no-repeat center center;
     background-size: cover;
     z-index: -1; /* Place it behind all other content */
 }
@@ -931,7 +931,6 @@ a:hover {
 .ull li b {
     flex: 0 0 220px; /* Assign a fixed width to the bolded title */
     font-weight: 700; /* Ensure consistent bolding */
-    color: #e92429; /* Set the color to red */
 }
 
 .reveal.delay-1 { transition-delay: 0.1s; }
@@ -971,7 +970,7 @@ a:hover {
     .ull { text-align: left; }
 
     .ull li {
-        display: block; /* Change from flex to block for natural stacking */
+        display: block; /* Change to block to allow natural text flow */
         margin-bottom: 15px; /* Add space between list items */
     }
 
