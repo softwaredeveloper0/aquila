@@ -27,7 +27,7 @@ body::before {
     left: 0;
     width: 100%; /* Ensure it covers the full viewport width */
     height: 100%; /* Ensure it covers the full viewport height */
-    background: url('https://softwaredeveloper0.github.io/aquila/picture1.png') no-repeat center center;
+    background: url('newcover.png') no-repeat center center;
     background-size: cover;
     z-index: -1; /* Place it behind all other content */
 }
@@ -161,15 +161,14 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 25px 60px;    
-    background-color: white;
-
+    background-color: var(--white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: background-color 0.4s ease, box-shadow 0.4s ease;
     z-index: 1000;
 }
 
 .navbar.sticky {
     background-color: var(--white);
-    
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     height: 75px;
 }
@@ -345,11 +344,13 @@ a:hover {
 .service-card {
     background-color: var(--white);
     padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    flex: 0 1 300px; /* Set a flex-basis to encourage a 3-column layout */
-    max-width: 320px; /* Prevent cards from growing too large */
-    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    flex: 0 1 45%; /* Set basis to allow for a 2-column layout */
+    max-width: 450px; /* Allow cards to be a bit wider in a 2-column layout */
     transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease, opacity 0.4s ease;
     border-top: 5px solid var(--secondary-blue);
     transform-origin: center top;
@@ -370,11 +371,13 @@ a:hover {
     font-size: 1.6em;
     margin-bottom: 15px;
     color: var(--primary-blue);
+    min-height: 3.5em; /* Ensures headings have a consistent height, aligning paragraphs below */
 }
 
 .service-card p {
     font-size: 1em;
     margin-bottom: 25px;
+    flex-grow: 1; /* Allows the paragraph to grow and push the button down */
     color: #555;
 }
 
@@ -405,6 +408,7 @@ a:hover {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Enforce a strict 3-column grid */
     gap: 25px;
     margin-top: 40px;
 }
@@ -469,22 +473,41 @@ a:hover {
 /* About Us Section */
 
 .about {
-    background-color: var(--light-gray);
+    background-color: white;
     position: relative;
     overflow: hidden;
     text-align: left;
     text-align: center;
     padding: 100px 20px;
+        background-size:auto;
+
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image {
+    flex: 1 1 30%; /* Image container takes 30% width */
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Keep the shadow */
 }
 
 .about-content {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px;
-    background-color: var(--white);
+    flex: 1 1 70%; /* Content container takes 70% width */
+    padding: 0;
+    background-size: cover;
+    background-position: center;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    text-align: left;
     text-align: center;
 }
 
@@ -498,13 +521,15 @@ a:hover {
     text-align: center;
     margin-bottom: 30px;
     font-size: 1.1em;
+    color: var(--primary-blue);
 }
 
 .about-content p {
     font-size: 1.05em;
     margin-bottom: 20px;
-    color: #444;
+    color: var(--primary-blue);
     text-align: left;
+    text-align: justify; /* Justify paragraph text for a clean, block-like appearance */
 }
 
 /* Our Story Section */
@@ -844,30 +869,82 @@ a:hover {
 
 .us{
     color: var(--primary-blue);
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, );
+    color: var(--white);
+    background-color: transparent;
     padding: 60px 20px;
 }
 
 .us-content {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 .us-content p {
     margin-bottom: 30px;
 }
+
+.us-text {
+    flex: 1 1 60%;
+    text-align: center; /* Center align the content within this container */
+}
+
+.us-text h2, .us-text p {
+    /* This rule is now handled by the parent .us-text */
+    text-align: center; /* Ensure paragraph is centered */
+}
+
+.us h2 {
+    color: var(--white);
+}
+
+.us-image {
+    flex: 1 1 40%;
+}
+
+.us-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
 .ull{
     list-style: none;
     display: flex;
-    justify-content:center;
-    text-align: justify;
-    justify-content: center;
-    text-align: left;
+    flex-direction: column;
     word-spacing: normal;
     flex-wrap: wrap;
     gap: 5px;
     padding-left: 0;
+    text-align: left; /* Align the list to the left */
     color: var(--primary-blue);
+    color: var(--white);
+}
+
+.ull li {
+    display: flex;
+    text-align: left;
+}
+
+.ull li b {
+    flex: 0 0 220px; /* Assign a fixed width to the bolded title */
+    font-weight: 700; /* Ensure consistent bolding */
+}
+
+.ull li b i {
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
 }
 
 .reveal.delay-1 { transition-delay: 0.1s; }
@@ -890,6 +967,21 @@ a:hover {
     .footer-content { flex-direction: column; gap: 20px; }
     .footer-links { gap: 15px; justify-content: center; }
     .gallery1 { flex-direction: column; align-items: center; }
+    .us-content {
+        flex-direction: column;
+    }
+    .about-container {
+        flex-direction: column;
+    }
+    .about-content {
+        order: 1; /* Show content first on mobile */
+    }
+    .about-image {
+        order: 2; /* Show image second on mobile */
+    }
+
+    .us-text h2, .us-text p { text-align: center; }
+    .ull { text-align: left; }
 
     .partners-grid {
         grid-template-columns: 1fr; /* 1 column for mobile */
@@ -915,15 +1007,18 @@ a:hover {
     .section-subtitle { font-size: 0.95em; }
     .service-container {
         flex-direction: column;
-        align-items: center;
-        gap: 20px; /* Space for last card to scroll */
-        padding-bottom: 100px;
+        padding-bottom: 50vh; /* Add space at the bottom for the last card to scroll */
     }
     .service-card {
         max-width: 100%;
         position: sticky;
         top: 100px;
     }
+    /* Stacking effect for service cards */
+    .service-card:nth-child(2) { top: 120px; }
+    .service-card:nth-child(3) { top: 140px; }
+    .service-card:nth-child(4) { top: 160px; }
+    .service-card:nth-child(5) { top: 180px; }
     /* Stacking effect for service cards on mobile */
     .service-card:nth-child(2) { top: 120px; }
     .service-card:nth-child(3) { top: 140px; }
@@ -971,6 +1066,19 @@ a:hover {
     background-color: var(--primary-blue); /* Blue when sticky */
 }
 
+/* Hamburger animation to 'X' */
+.hamburger-menu.is-active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu.is-active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.is-active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 
 
 /* Mobile Navigation Layout */
@@ -995,6 +1103,7 @@ a:hover {
     .gallery-grid {
         grid-template-columns: 1fr; /* Ensure a single column layout on mobile */
     }
+
 
     .nav-links {
         position: fixed;
