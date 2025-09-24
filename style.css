@@ -27,7 +27,7 @@ body::before {
     left: 0;
     width: 100%; /* Ensure it covers the full viewport width */
     height: 100%; /* Ensure it covers the full viewport height */
-    background: url('newcover.png') no-repeat center center;
+    background: url('https://softwaredeveloper0.github.io/aquila/covernew1.jpeg') no-repeat center center;
     background-size: cover;
     z-index: -1; /* Place it behind all other content */
 }
