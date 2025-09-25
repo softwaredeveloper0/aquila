@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setInterval(() => {
         showSlide(currentSlide + 1);
-    }, 7000); // Change image every 3 seconds
+    }, 5000); // Change image every 3 seconds
 
     // 2. Sticky Navbar on Scroll
     const navbar = document.querySelector('.navbar');
